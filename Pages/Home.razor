@@ -1,0 +1,53 @@
+﻿// TodoClient/Components/Pages/Home.razor
+@page "/"
+@using System.Text.Json.Serialization
+@inject HttpClient Http
+
+<PageTitle>Todo List</PageTitle>
+
+<h1>Todo List</h1>
+
+<p>This component demonstrates fetching data from the server.</p>
+
+@if (todos == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <ul class="list-group">
+        @foreach (var todo in todos)
+        {
+            <li class="list-group-item">
+                <input type="checkbox" checked="@todo.IsComplete" />
+                <span style="text-decoration: @(todo.IsComplete ? "line-through" : "none")">
+                    @todo.Name
+                </span>
+            </li>
+        }
+    </ul>
+}
+
+@code {
+    private Todo[]? todos;
+
+    // This method is called when the component is initialized
+    protected override async Task OnInitializedAsync()
+    {
+        // Fetch the todos from our API
+        todos = await Http.GetFromJsonAsync<Todo[]>("todos");
+    }
+
+    // A class to represent the Todo item, matching our API model
+    public class Todo
+    {
+        [JsonPropertyName("id")]
+        public int Id { get; set; }
+
+        [JsonPropertyName("name")]
+        public string? Name { get; set; }
+
+        [JsonPropertyName("isComplete")]
+        public bool IsComplete { get; set; }
+    }
+}
