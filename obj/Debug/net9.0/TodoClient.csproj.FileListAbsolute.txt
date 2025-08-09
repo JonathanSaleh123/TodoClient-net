@@ -199,8 +199,6 @@
 /Users/jonathansaleh/Documents/WebDev/net-app/TodoClient/bin/Debug/net9.0/wwwroot/_framework/icudt_CJK.tjcz0u77k5.dat
 /Users/jonathansaleh/Documents/WebDev/net-app/TodoClient/bin/Debug/net9.0/wwwroot/_framework/icudt_EFIGS.tptq2av103.dat
 /Users/jonathansaleh/Documents/WebDev/net-app/TodoClient/bin/Debug/net9.0/wwwroot/_framework/icudt_no_CJK.lfu7j35m59.dat
-/Users/jonathansaleh/Documents/WebDev/net-app/TodoClient/bin/Debug/net9.0/wwwroot/_framework/TodoClient.ygbrjcm3st.wasm
-/Users/jonathansaleh/Documents/WebDev/net-app/TodoClient/bin/Debug/net9.0/wwwroot/_framework/TodoClient.w2qhc77rhq.pdb
 /Users/jonathansaleh/Documents/WebDev/net-app/TodoClient/bin/Debug/net9.0/wwwroot/_framework/blazor.boot.json
 /Users/jonathansaleh/Documents/WebDev/net-app/TodoClient/bin/Debug/net9.0/wwwroot/_framework/blazor.webassembly.js.gz
 /Users/jonathansaleh/Documents/WebDev/net-app/TodoClient/bin/Debug/net9.0/wwwroot/_framework/Microsoft.AspNetCore.Authorization.tnyc7xpluy.wasm.gz
@@ -403,8 +401,6 @@
 /Users/jonathansaleh/Documents/WebDev/net-app/TodoClient/bin/Debug/net9.0/wwwroot/_framework/icudt_CJK.tjcz0u77k5.dat.gz
 /Users/jonathansaleh/Documents/WebDev/net-app/TodoClient/bin/Debug/net9.0/wwwroot/_framework/icudt_EFIGS.tptq2av103.dat.gz
 /Users/jonathansaleh/Documents/WebDev/net-app/TodoClient/bin/Debug/net9.0/wwwroot/_framework/icudt_no_CJK.lfu7j35m59.dat.gz
-/Users/jonathansaleh/Documents/WebDev/net-app/TodoClient/bin/Debug/net9.0/wwwroot/_framework/TodoClient.ygbrjcm3st.wasm.gz
-/Users/jonathansaleh/Documents/WebDev/net-app/TodoClient/bin/Debug/net9.0/wwwroot/_framework/TodoClient.w2qhc77rhq.pdb.gz
 /Users/jonathansaleh/Documents/WebDev/net-app/TodoClient/bin/Debug/net9.0/wwwroot/_framework/blazor.boot.json.gz
 /Users/jonathansaleh/Documents/WebDev/net-app/TodoClient/bin/Debug/net9.0/TodoClient.staticwebassets.runtime.json
 /Users/jonathansaleh/Documents/WebDev/net-app/TodoClient/bin/Debug/net9.0/TodoClient.staticwebassets.endpoints.json
@@ -1068,9 +1064,6 @@
 /Users/jonathansaleh/Documents/WebDev/net-app/TodoClient/obj/Debug/net9.0/compressed/8yrvq0z7si-tjcz0u77k5.gz
 /Users/jonathansaleh/Documents/WebDev/net-app/TodoClient/obj/Debug/net9.0/compressed/tl7vrehm3n-tptq2av103.gz
 /Users/jonathansaleh/Documents/WebDev/net-app/TodoClient/obj/Debug/net9.0/compressed/gzpmgkefla-lfu7j35m59.gz
-/Users/jonathansaleh/Documents/WebDev/net-app/TodoClient/obj/Debug/net9.0/compressed/423o6s42bp-ygbrjcm3st.gz
-/Users/jonathansaleh/Documents/WebDev/net-app/TodoClient/obj/Debug/net9.0/compressed/tztp7bosez-w2qhc77rhq.gz
-/Users/jonathansaleh/Documents/WebDev/net-app/TodoClient/obj/Debug/net9.0/compressed/biave8o6b1-f7v2btzcbz.gz
 /Users/jonathansaleh/Documents/WebDev/net-app/TodoClient/obj/Debug/net9.0/staticwebassets.build.json
 /Users/jonathansaleh/Documents/WebDev/net-app/TodoClient/obj/Debug/net9.0/staticwebassets.build.json.cache
 /Users/jonathansaleh/Documents/WebDev/net-app/TodoClient/obj/Debug/net9.0/staticwebassets.development.json
@@ -1080,3 +1073,11 @@
 /Users/jonathansaleh/Documents/WebDev/net-app/TodoClient/obj/Debug/net9.0/refint/TodoClient.dll
 /Users/jonathansaleh/Documents/WebDev/net-app/TodoClient/obj/Debug/net9.0/TodoClient.pdb
 /Users/jonathansaleh/Documents/WebDev/net-app/TodoClient/obj/Debug/net9.0/ref/TodoClient.dll
+/Users/jonathansaleh/Documents/WebDev/net-app/TodoClient/obj/Debug/net9.0/TodoClient.sourcelink.json
+/Users/jonathansaleh/Documents/WebDev/net-app/TodoClient/bin/Debug/net9.0/wwwroot/_framework/TodoClient.3p0dmmqk0p.wasm
+/Users/jonathansaleh/Documents/WebDev/net-app/TodoClient/bin/Debug/net9.0/wwwroot/_framework/TodoClient.4m6mr8g80r.pdb
+/Users/jonathansaleh/Documents/WebDev/net-app/TodoClient/bin/Debug/net9.0/wwwroot/_framework/TodoClient.3p0dmmqk0p.wasm.gz
+/Users/jonathansaleh/Documents/WebDev/net-app/TodoClient/bin/Debug/net9.0/wwwroot/_framework/TodoClient.4m6mr8g80r.pdb.gz
+/Users/jonathansaleh/Documents/WebDev/net-app/TodoClient/obj/Debug/net9.0/compressed/423o6s42bp-3p0dmmqk0p.gz
+/Users/jonathansaleh/Documents/WebDev/net-app/TodoClient/obj/Debug/net9.0/compressed/tztp7bosez-4m6mr8g80r.gz
+/Users/jonathansaleh/Documents/WebDev/net-app/TodoClient/obj/Debug/net9.0/compressed/biave8o6b1-yrauht5d8r.gz

@@ -4,10 +4,14 @@
 @inject HttpClient Http
 
 <PageTitle>Todo List</PageTitle>
-
 <h1>Todo List</h1>
 
-<p>This component demonstrates fetching data from the server.</p>
+<!-- Section for adding a new todo -->
+<div class="input-group mb-3">
+    <input @bind="newTodoName" class="form-control" placeholder="Something to do" />
+    <button @onclick="AddTodo" class="btn btn-primary">Add Todo</button>
+</div>
+
 
 @if (todos == null)
 {
@@ -18,11 +22,15 @@ else
     <ul class="list-group">
         @foreach (var todo in todos)
         {
-            <li class="list-group-item">
-                <input type="checkbox" checked="@todo.IsComplete" />
-                <span style="text-decoration: @(todo.IsComplete ? "line-through" : "none")">
-                    @todo.Name
-                </span>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <div>
+                    <!-- Checkbox now calls the ToggleTodo function -->
+                    <input type="checkbox" checked="@todo.IsCompleted" @onchange="() => ToggleTodo(todo)" />
+                    <span style="text-decoration: @(todo.IsCompleted ? "line-through" : "none")" class="ms-2">
+                        @todo.Name
+                    </span>
+                </div>
+                <button @onclick="() => DeleteTodo(todo.Id)" class="btn btn-danger btn-sm">Delete</button>
             </li>
         }
     </ul>
@@ -30,12 +38,55 @@ else
 
 @code {
     private Todo[]? todos;
+    private string? newTodoName;
 
     // This method is called when the component is initialized
     protected override async Task OnInitializedAsync()
     {
         // Fetch the todos from our API
         todos = await Http.GetFromJsonAsync<Todo[]>("todos");
+    }
+
+    // Method to add a new todo
+    private async Task AddTodo()
+    {
+        if (!string.IsNullOrWhiteSpace(newTodoName))
+        {
+            var newTodo = new Todo { Name = newTodoName, IsCompleted = false };
+            var response = await Http.PostAsJsonAsync("todos", newTodo);
+            if (response.IsSuccessStatusCode)
+            {
+                // Refresh the todo list after adding
+                todos = await Http.GetFromJsonAsync<Todo[]>("todos");
+                newTodoName = string.Empty; // Clear the input field
+            }
+        }
+    }
+
+    private async Task ToggleTodo(Todo todo)
+    {
+        todo.IsCompleted = !todo.IsCompleted;
+
+        // Send the PUT request to the API
+        var response = await Http.PutAsJsonAsync($"todos/{todo.Id}", todo);
+
+        if (!response.IsSuccessStatusCode)
+        {
+            todo.IsCompleted = !todo.IsCompleted;
+        }
+
+        StateHasChanged();
+    }
+
+    // Method to delete a todo
+    private async Task DeleteTodo(int id)
+    {
+        var response = await Http.DeleteAsync($"todos/{id}");
+        if (response.IsSuccessStatusCode)
+        {
+            // Refresh the todo list after deletion
+            todos = todos?.Where(t => t.Id != id).ToArray();
+        }
     }
 
     // A class to represent the Todo item, matching our API model
@@ -47,7 +98,11 @@ else
         [JsonPropertyName("name")]
         public string? Name { get; set; }
 
-        [JsonPropertyName("isComplete")]
-        public bool IsComplete { get; set; }
+        [JsonPropertyName("isCompleted")]
+        public bool IsCompleted { get; set; }
     }
+
+
+
+    
 }
